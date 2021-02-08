@@ -89,7 +89,7 @@ const Auth: React.FC = () => {
   const [openModal, setOpenModal] = React.useState(false);
   const [resetEmail, setResetEmail] = useState("");
 
-  const sendResetEmail = async (e: React.MouseEvent<HTMLInputElement>) => {
+  const sendResetEmail = async (e: React.MouseEvent<HTMLElement>) => {
     await auth
       .sendPasswordResetEmail(resetEmail)
       .then(() => {
