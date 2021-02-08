@@ -287,7 +287,7 @@ const Auth: React.FC = () => {
               SignIn with Google!!
             </Button>
           </form>
-          <Modal open={openModal} onClose={() => setOpenModal(false)}>
+          {/* <Modal open={openModal} onClose={() => setOpenModal(false)}>
             <div style={getModalStyle()} className={classes.modal}>
               <div className={styles.login_modal}>
                 <TextField
@@ -307,7 +307,7 @@ const Auth: React.FC = () => {
                 </IconButton>
               </div>
             </div>
-          </Modal>
+          </Modal> */}
         </div>
       </Grid>
     </Grid>
