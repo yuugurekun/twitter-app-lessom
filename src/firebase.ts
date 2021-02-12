@@ -4,18 +4,18 @@ import "firebase/firestore";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC8dGdPctKLg6fiu_Rnu8WZ0MhHC6VFN3I",
-  authDomain: "twitter-app-f420d.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-  projectId: "twitter-app-f420d",
-  storageBucket: "twitter-app-f420d.appspot.com",
-  messagingSenderId: "104731989841",
-  appId: "1:104731989841:web:849cc68382aaba0f0f6570",
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 export const db = firebaseApp.firestore();
-export const auth = firebaseApp.auth();
-export const storage = firebaseApp.storage();
+export const auth = firebase.auth();
+export const storage = firebase.storage();
 export const provider = new firebase.auth.GoogleAuthProvider();
-
